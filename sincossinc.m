@@ -1,0 +1,15 @@
+x = linspace(-5*pi, 5*pi, 400);
+y_sin = sin(x);
+y_cos = cos(x);
+y_sinc = sin(x) ./ x; 
+y_sinc(x == 0) = 1; 
+plot(x, y_sin, 'b-', 'linewidth', 2, 'DisplayName', 'Sine');
+hold on;
+plot(x, y_cos, 'g-', 'linewidth', 2, 'DisplayName', 'Cosine');
+plot(x, y_sinc, 'r-', 'linewidth', 2, 'DisplayName', 'Sinc');
+hold off;
+xlabel('x');
+ylabel('y');
+title('Sine, Cosine, and Sinc Functions');
+legend('show');
+grid on;
